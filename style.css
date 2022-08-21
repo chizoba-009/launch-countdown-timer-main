@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background: url('images/nikhita-singhal-k8y9HrzonOQ-unsplash.jpg') center
+    center / cover no-repeat;
+  background-color: hsl(234, 17%, 12%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0 15px 8px rgba(0, 0, 0, 1);
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: cursive;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+main .countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .countdown > div div {
+  background: hsl(236, 21%, 26%);
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  transform: scale(1, 1);
+  transition: transform ease-out 250ms, background ease-in 250ms;
+  box-shadow: -2px 5px 46px -12px rgba(0, 0, 0, 0.84);
+}
+
+main .countdown > div div:hover {
+  transform: scale(0.8, 0.8);
+  background: transparent;
+  border: 1px solid hsl(345, 95%, 68%);
+}
+
+main .countdown h2 {
+  color: hsl(345, 95%, 68%);
+  font-size: 4rem;
+}
+
+main .countdown p {
+  color: hsl(237, 18%, 59%);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  color: hsl(345, 95%, 68%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media query */
+@media all and (max-width: 516px) {
+  h1 {
+    width: 80%;
+  }
+  .countdown {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .countdown > div {
+    width: 43%;
+  }
+
+  main .countdown h2 {
+    color: hsl(345, 95%, 68%);
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
